@@ -1,0 +1,646 @@
+
+.property-grid, .city-grid, .properties-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.property-item, .city-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.property-item img, .city-item img {
+    width: 100%;
+    height: auto;
+}
+
+.details {
+    text-align: left;
+    padding: 10px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+#properties .property {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+    width: 300px;
+}
+
+#cart {
+  position: fixed; /* Fixed position on the page */
+  right: 20px; /* Positioned to the right */
+  top: 20px; /* Positioned at the top */
+  width: 300px;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  z-index: 1000; /* Make sure it appears above other content */
+}
+
+#cartItems li {
+  list-style: none; /* Removes bullets */
+  margin-bottom: 10px;
+}
+
+#total {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.property-grid, .city-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.property-item, .city-item {
+    flex: 1 1 200px;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+#properties .property {
+    flex: 1 1 200px;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.property-item img, .city-item img {
+    width: 100%;  /* makes the image fill the container */
+    height: 200px; /* fixed height for all images */
+    object-fit: cover; /* ensures the image covers the area without distorting aspect ratio */
+    border-radius: 5px; /* optional, for rounded corners */
+}
+
+#properties .property img {
+    width: 100%; /* makes the image fill the container */
+    height: 200px; /* fixed height for all images */
+    object-fit: cover; /* ensures the image covers the area, cropping if necessary */
+    border-radius: 5px; /* optional, for rounded corners */
+}
+footer {
+    background-color: #343a40; /* dark footer background */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#cart {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 300px;
+    background: #ffffff; /* white background for cart */
+    border-left: 1px solid #ccc;
+    padding: 20px;
+    height: 100vh;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+#cart.cart-shown {
+    transform: translateX(0);
+}
+
+#cartItems li {
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #28a745; /* green color for buttons */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #218838; /* darker green on hover */
+}
+
+#checkoutButton {
+    width: 100%;
+}
+
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* light gray background for the page */
+    color: #333; /* dark gray text for readability */
+}
+
+header {
+    background-color: #000000; /* primary blue */
+    color: #ffffff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFFBE7; /* Light cream background */
+}
+
+footer {
+    background-color: #FFF5CC; /* Light yellow */
+    color: #333;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.products-section {
+    background-color: rgb(15, 15, 15);
+  }
+  .item-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2em;
+  }
+  .item-card {
+    height: 500px;
+    background-color: white;
+    width: 375px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    margin: 10px 5px 10px 5px;
+    cursor: pointer;
+  }
+  .item-image {
+    height: 350px;
+    width: 350px;
+    object-fit: cover;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  .item-name {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-left: 15px;
+    margin-top: 1em;
+    align-self: flex-start;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 300px;
+    height: 26px;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .item-category {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-left: 15px;
+    margin-top: 0.5em;
+    align-self: flex-start;
+    cursor: pointer;
+    color: rgb(55, 55, 55);
+  }
+  .item-price {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-left: 15px;
+    margin-top: 0.5em;
+    align-self: flex-start;
+    cursor: pointer;
+  }
+  .item-card:hover {
+    color: #ffcc22;
+    transition: ease-in-out 0.2s;
+  }
+  .img-1 {
+    height: 350px;
+    width: 350px;
+    object-fit: cover;
+
+    margin-top: 10px;
+    background-size: 350px 450px;
+    background-position: center;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-image: url("images/shoe\ 01.jpeg");
+  }
+  .img-1:hover {
+    background-image: url("images/shoe\ 01_1.jpeg");
+  }
+  .img-2 {
+    height: 350px;
+    width: 350px;
+    object-fit: cover;
+    background-position: center;
+
+    margin-top: 10px;
+    background-size: 350px 450px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-image: url("images/shoe\ 02.jpeg");
+  }
+  .img-2:hover {
+    background-image: url("images/shoe\ 02_1.png");
+  }
+  .img-3 {
+    height: 350px;
+    width: 350px;
+    object-fit: cover;
+    background-position: center;
+
+    margin-top: 10px;
+    background-size: 350px 450px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-image: url("images/shoe\ 03.png");
+  }
+  .img-3:hover {
+    background-image: url("images/shoe\ 03_1.png");
+  }
+  .img-4 {
+    height: 350px;
+    width: 350px;
+    object-fit: cover;
+    background-position: center;
+
+    margin-top: 10px;
+    background-size: 350px 450px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-image: url("images/shoe\ 04.png");
+  }
+  .img-4:hover {
+    background-image: url("images/shoe\ 04_1.png");
+  }
+  .img-5 {
+    height: 350px;
+    width: 350px;
+    object-fit: cover;
+    background-position: center;
+
+    margin-top: 10px;
+    background-size: 350px 450px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-image: url("images/shoe\ 05.png");
+  }
+  .img-5:hover {
+    background-image: url("images/shoe\ 05_1.png");
+  }
+  .img-6 {
+    height: 350px;
+    width: 350px;
+    object-fit: cover;
+    background-position: center;
+
+    margin-top: 10px;
+    background-size: 350px 450px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-image: url("images/shoe\ 06.png");
+  }
+  .img-6:hover {
+    background-image: url("images/shoe\ 06_1.png");
+  }
+  .img-7 {
+    height: 350px;
+    width: 350px;
+    object-fit: cover;
+    background-position: center;
+
+    margin-top: 10px;
+    background-size: 350px 450px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-image: url("images/shoe\ 07.png");
+  }
+  .img-7:hover {
+    background-image: url("images/shoe\ 07_1.jpeg");
+  }
+  .img-8 {
+    height: 350px;
+    width: 350px;
+    object-fit: cover;
+    background-position: center;
+
+    margin-top: 10px;
+    background-size: 350px 450px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-image: url("images/shoe\ 08.png");
+  }
+  .img-8:hover {
+    background-image: url("images/shoe\ 08_1.png");
+  }
+  .img-9 {
+    height: 350px;
+    width: 350px;
+    object-fit: cover;
+    background-position: center;
+
+    margin-top: 10px;
+    background-size: 350px 450px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-image: url("images/shoe\ 09.png");
+  }
+  .img-9:hover {
+    background-image: url("images/shoe\ 09_1.jpeg");
+  }
+  .img-10 {
+    height: 350px;
+    width: 350px;
+    object-fit: cover;
+    background-position: center;
+
+    margin-top: 10px;
+    background-size: 350px 450px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-image: url("images/shoe\ 10.png");
+  }
+  .img-10:hover {
+    background-image: url("images/shoe\ 10_1.png");
+  }
+  .img-11 {
+    height: 350px;
+    width: 350px;
+    object-fit: cover;
+    background-position: center;
+
+    margin-top: 10px;
+    background-size: 350px 450px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-image: url("images/shoe\ 11.png");
+  }
+  .img-11:hover {
+    background-image: url("images/shoe\ 11_1.png");
+  }
+  .img-12 {
+    height: 350px;
+    width: 350px;
+    object-fit: cover;
+    background-position: center;
+
+    margin-top: 10px;
+    background-size: 350px 450px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-image: url("images/shoe\ 12.png");
+  }
+  .img-12:hover {
+    background-image: url("images/shoe\ 12_1.png");
+  }
+  .img-13 {
+    height: 350px;
+    width: 350px;
+    object-fit: cover;
+    background-position: center;
+
+    margin-top: 10px;
+    background-size: 350px 450px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-image: url("images/shoe\ 13.png");
+  }
+  .img-13:hover {
+    background-image: url("images/shoe\ 13_1.png");
+  }
+  .img-14 {
+    height: 350px;
+    width: 350px;
+    object-fit: cover;
+    background-position: center;
+
+    margin-top: 10px;
+    background-size: 350px 450px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-image: url("images/shoe\ 14.png");
+  }
+  .img-14:hover {
+    background-image: url("images/shoe\ 14_1.png");
+  }
+  .img-15 {
+    height: 350px;
+    width: 350px;
+    object-fit: cover;
+    background-position: center;
+
+    margin-top: 10px;
+    background-size: 350px 450px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-image: url("images/shoe\ 15.png");
+  }
+  .img-15:hover {
+    background-image: url("images/shoe\ 15_1.png");
+  }
+  .img-16 {
+    height: 350px;
+    width: 350px;
+    object-fit: cover;
+    background-position: center;
+
+    margin-top: 10px;
+    background-size: 350px 450px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-image: url("images/shoe\ 16.png");
+  }
+  .img-16:hover {
+    background-image: url("images/shoe\ 16_1.png");
+  }
+
+  nav {
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: black;
+    height: 5em;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-left: 1em;
+    cursor: pointer;
+    color: #ffcc22;
+  }
+
+  .nav-links {
+    height: 4em;
+    background-color: black;
+    font-family: "Hind", sans-serif;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 2;
+  }
+  .nav-links a {
+    color: black;
+    background-color: white;
+
+    text-align: center;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: ease-in 0.3s;
+    padding: 11px 40px 11px 40px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    border: 2px solid black;
+    transition: ease-in 0.3s;
+  }
+  .nav-links a:first-of-type {
+    color: white;
+
+    background: linear-gradient(to top right, #2d2d2d, #000000, #1f1f1f)
+        padding-box,
+      linear-gradient(to top right, #ffd768, #ff9408) border-box;
+    border-radius: 5px;
+    border: 2px solid transparent;
+  }
+  .nav-links a:nth-of-type(n + 2):hover {
+    border-radius: 5px;
+    background-color: #000000;
+    border: 2px solid white;
+    color: white;
+  }
+
+  .add-to-cart {
+    padding: 10px 20px;
+    background-color: #f04e23;  /* RichLook's brand color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    bottom: 10px;  /* Adjust this value as needed */
+}
+
+.add-to-cart:hover {
+    background-color: #ffe168;  /* A darker shade for hover effect */
+}
+
+footer {
+  background-color: #282828; /* Deep gray for a modern, sleek look */
+  color: #f5f5f5; /* Light text for high contrast and readability */
+  padding: 20px 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Aesthetic font choice */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between; /* Adjusted for better space utilization */
+  align-items: center;
+  padding: 20px;
+}
+
+.footer-section h4 {
+  color: #ff9408; /* RichLook's brand color */
+  margin-bottom: 10px;
+}
+
+.footer-section {
+  margin-right: 20px;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover, .footer-section a:hover {
+  color: #ff9408; /* Enhancing interactivity with a hover effect */
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #444; /* Subtle top border for separation */
+  padding-top: 10px;
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+.footer-logo {
+  font-size: 24px; /* Increased font size for the RichLook name */
+  font-weight: bold; /* Making the logo/name more prominent */
+  color: #ff9408; /* Ensuring the brand name stands out */
+  padding-bottom: 20px; /* Additional spacing */
+}
+
+img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  vertical-align: middle; /* Aligns images with text */
+}
+
+a {
+  color: #ff9408;
+}
+
+/* Additional styling for responsiveness and aesthetics */
+@media (max-width: 768px) {
+  .footer-content {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footer-section {
+      margin-bottom: 20px;
+  }
+}
