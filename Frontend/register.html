@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration Page</title>
-    <link rel="stylesheet" href="Style/register_style.css" />
+    <link rel="stylesheet" href="register_style.css" />
   </head>
   <body>
     <div class="login-container">
@@ -24,14 +24,7 @@
         </div>
         <div class="input-group">
           <label for="phone">Phone Number:</label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            maxlength="10"
-            pattern="\d{10}"
-            required
-          />
+          <input type="tel" id="phone" name="phone" required />
         </div>
         <div class="input-group">
           <label for="phone">Password:</label>
@@ -41,9 +34,8 @@
           <label for="gender">Gender:</label>
           <select id="gender" name="gender" required>
             <option value="">Select...</option>
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-            <option value="Other">Other</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
           </select>
         </div>
         <button type="submit">Register</button>
@@ -52,7 +44,7 @@
         </p>
       </form>
     </div>
-    <script type="module" src="Javascript/register_script.js"></script>
+    <script type="module" src="register_script.js"></script>
     <script type="module" src="utils/apiFunctions.js"></script>
   </body>
 </html>
