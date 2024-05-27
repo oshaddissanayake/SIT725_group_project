@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+.review {
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0;
+}
+
+.review:last-child {
+    border-bottom: none;
+}
+
+.review h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.review .rating {
+    color: #f39c12;
+    font-size: 1em;
+}
+
+.review p {
+    margin: 10px 0 0 0;
+    color: #555;
+}
+
+.review .reviewer {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #777;
+}
