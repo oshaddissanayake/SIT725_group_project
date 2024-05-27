@@ -18,7 +18,8 @@ document
       })
         .then((response) => {
           // navigate to index.html
-          window.location.href = "index.html";
+          //window.location.href = "index.html";
+          window.location.href = "profile.html";
           console.log("response", response);
         })
         .catch((err) => {
