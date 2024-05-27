@@ -15,7 +15,7 @@
           })
             .then((response) => response.json())
             .then((data) => {
-              alert("User has been deleted succes.");
+              alert("User has been deleted successfully.");
               location.reload();
             })
             .catch((error) => console.error("Error deleting user:", error));
@@ -357,7 +357,7 @@
             body: JSON.stringify(jsonData),
         })
         .then((response) => {
-            if (!response.ok) throw new Error("Failed to create new user");
+            if (!response.ok) throw new Error("Failed to create user");
             return response.json();
         })
         .then((data) => {

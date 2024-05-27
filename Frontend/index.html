@@ -1,181 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RichLook Shoe Store</title>
-    <link rel="stylesheet" href="Style/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RichLook Shoe Store</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <div class="navbar">
-              <div class="nav-bar">
-                <div class="logo">RichLook</div>
-                </div>
-              </div>
-              <div class="nav-links">
-                <a href="" class="selected-link">Home</a><a href="">Products</a
-                ><a href="">New Arrivals</a><a href="">Sale</a>
-              </div>
-            </nav>
-        </div>
-    </header>
-    <section class="products-section">
-        <div class="item-container">
-          <div class="item-card">
-            <div class="img-1"></div>
-            <h1 class="item-name">Tatum 1</h1>
-            <h2 class="item-category">Basketball Shoes</h2>
-            <h3 class="item-price">$120</h3>
-            <button class="add-to-cart">Add to Cart</button>
-          </div>
-          <div class="item-card">
-            <div class="img-2"></div>
+  <header>
 
-            <h1 class="item-name">Air Jordan 1 Low OG</h1>
-            <h2 class="item-category">Men's Shoes</h2>
-            <h3 class="item-price">$140</h3>
-            <button class="add-to-cart">Add to Cart</button>
-          </div>
-          <div class="item-card">
-            <div class="img-3"></div>
-            <h1 class="item-name">Air Jordan 2 Mid</h1>
-            <h2 class="item-category">Men's Shoes</h2>
-            <h3 class="item-price">$125</h3>
-            <button class="add-to-cart">Add to Cart</button>
-          </div>
-          <div class="item-card">
-            <div class="img-4"></div>
-            <h1 class="item-name">Jumpman MVP</h1>
-            <h2 class="item-category">Men's Shoes</h2>
-            <h3 class="item-price">$165</h3>
-            <button class="add-to-cart">Add to Cart</button>
-          </div>
-          <div class="item-card">
-            <div class="img-5"></div>
-            <h1 class="item-name">Nike Air Force 3 Shadow</h1>
-            <h2 class="item-category">Women's Shoes</h2>
-            <h3 class="item-price">$130</h3>
-            <button class="add-to-cart">Add to Cart</button>
-          </div>
-          <div class="item-card">
-            <div class="img-6"></div>
-            <h1 class="item-name">Nike Air Force 4 '07</h1>
-            <h2 class="item-category">Men's Shoes</h2>
-            <h3 class="item-price">$125</h3>
-            <button class="add-to-cart">Add to Cart</button>
-          </div>
-          <div class="item-card">
-            <div class="img-7"></div>
-            <h1 class="item-name">Nike Court Legacy Next Nature</h1>
-            <h2 class="item-category">Women's Shoes</h2>
-            <h3 class="item-price">$70</h3>
-            <button class="add-to-cart">Add to Cart</button>
-          </div>
-          <div class="item-card">
-            <div class="img-8"></div>
+    <div class="navbar">
+      <div class="nav-bar">
+        <div class="logo">RichLook</div>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="" class="selected-link">Home</a>
+      <a href="">Products</a><a href="">New Arrivals</a>
+      <a href="">Sale</a>
+      <a href="reviews.html">Customer Reviews</a>
+      <a class="bx bx-shopping-bag">
+        <img src="images/cart.png" alt="Cart">
+        <span id="cart-icon">cart</span>
+      </a>
+    </div>
+    </nav>
+    </div>
+    <!-- Cart -->
+    <div class="cart">
+      <h2 class="cart-title">Your Cart</h2>
 
-            <h1 class="item-name">Nike Free Metcon 5 Premium</h1>
-            <h2 class="item-category">Women's Shoes</h2>
-            <h3 class="item-price">$130</h3>
-            <button class="add-to-cart">Add to Cart</button>
-          </div>
-          <div class="item-card">
-            <div class="img-9"></div>
+      <div class="cart-content">
 
-            <h1 class="item-name">Nike Air Max 97</h1>
-            <h2 class="item-category">Men's Shoes</h2>
-            <h3 class="item-price">$175</h3>
-            <button class="add-to-cart">Add to Cart</button>
-          </div>
-          <div class="item-card">
-            <div class="img-10"></div>
+      </div>
+      <!-- total -->
+      <div class="total">
+        <div class="total-title">Total</div>
+        <div class="total-price">$0</div>
+      </div>
+      <!-- buy button -->
+      <button class="btn-buy" type="button">Buy Now</button>
+      <!-- cart close -->
+      <i id="close-cart" class='bx bx-x'></i>
+    </div>
 
-            <h1 class="item-name">Nike Lunar Force 1</h1>
-            <h2 class="item-category">Men's Shoes</h2>
-            <h3 class="item-price">$185</h3>
-            <button class="add-to-cart">Add to Cart</button>
-          </div>
-          <div class="item-card">
-            <div class="img-11"></div>
+    </div>
+  </header>
+  <section class="products-section">
+    <div class="item-container">
+      <div class="item-card">
+        <div class="product-img"></div>
+        <h1 class="product-title">Tatum 1</h1>
+        <h2 class="item-category">Basketball Shoes</h2>
+        <h3 class="price">$120</h3>
+        <button class="add-cart">Add to Cart</button>
+      </div>
 
-            <h1 class="item-name">NikeCourt Air Zoom Vapor 11 Premium</h1>
-            <h2 class="item-category">Women's Shoes</h2>
-            <h3 class="item-price">$180</h3>
-            <button class="add-to-cart">Add to Cart</button>
-          </div>
-          <div class="item-card">
-            <div class="img-12"></div>
 
-            <h1 class="item-name">Nike Air Zoom Generation</h1>
-            <h2 class="item-category">Men's Shoes</h2>
-            <h3 class="item-price">$190</h3>
-            <button class="add-to-cart">Add to Cart</button>
-          </div>
-          <div class="item-card">
-            <div class="img-13"></div>
+      <div class="item-card">
+        <div class="product-img"></div>
+        <h1 class="product-title">Air Jordan 1 Mid</h1>
+        <h2 class="item-category">Men's Shoes</h2>
+        <h3 class="price">$125</h3>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+      <div class="item-card">
+        <div class="product-img4"></div>
+        <h1 class="product-title">Jumpman MVP</h1>
+        <h2 class="item-category">Men's Shoes</h2>
+        <h3 class="price">$165</h3>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+      <div class="item-card">
+        <div class="product-img5"></div>
+        <h1 class="product-title">Nike Air Force 1 Shadow</h1>
+        <h2 class="item-category">Women's Shoes</h2>
+        <h3 class="price">$130</h3>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+      <div class="item-card">
+        <div class="product-img6"></div>
+        <h1 class="product-title">Nike Air Force 1 '07</h1>
+        <h2 class="item-category">Men's Shoes</h2>
+        <h3 class="price">$125</h3>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+      <div class="item-card">
+        <div class="product-img7"></div>
+        <h1 class="product-title">Nike Court Legacy Next Nature</h1>
+        <h2 class="item-category">Women's Shoes</h2>
+        <h3 class="price">$70</h3>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+      <div class="item-card">
+        <div class="product-img8"></div>
 
-            <h1 class="item-name">Nike Air Zoom Flight 95</h1>
-            <h2 class="item-category">Men's Shoes</h2>
-            <h3 class="item-price">$160</h3>
-            <button class="add-to-cart">Add to Cart</button>
-          </div>
-          <div class="item-card">
-            <div class="img-14"></div>
+        <h1 class="product-title">Nike Free Metcon 5 Premium</h1>
+        <h2 class="item-category">Women's Shoes</h2>
+        <h3 class="price">$130</h3>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+      <div class="item-card">
+        <div class="product-img9"></div>
 
-            <h1 class="item-name">Nike Air Zoom Infinity Tour NRG</h1>
-            <h2 class="item-category">Men's Golf Shoes</h2>
-            <h3 class="item-price">$180</h3>
-            <button class="add-to-cart">Add to Cart</button>
-          </div>
-          <div class="item-card">
-            <div class="img-15"></div>
+        <h1 class="product-title">Nike Air Max 97</h1>
+        <h2 class="item-category">Men's Shoes</h2>
+        <h3 class="price">$175</h3>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+      <div class="item-card">
+        <div class="product-img10"></div>
 
-            <h1 class="item-name">NikeCourt Air Zoom GP Turbo Osaka</h1>
-            <h2 class="item-category">Women's Hard Court Tennis Shoes</h2>
-            <h3 class="item-price">$160</h3>
-            <button class="add-to-cart">Add to Cart</button>
-          </div>
-          <div class="item-card">
-            <div class="img-16"></div>
+        <h1 class="product-title">Nike Lunar Force 1</h1>
+        <h2 class="item-category">Men's Shoes</h2>
+        <h3 class="price">$185</h3>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+      <div class="item-card">
+        <div class="product-img11"></div>
 
-            <h1 class="item-name">Nike Air Max Pulse Roam</h1>
-            <h2 class="item-category">Men's Shoes</h2>
-            <h3 class="item-price">$170</h3>
-            <ul id="cartItems"></ul>
-            <button onclick="addToCart('Beachfront Condo', 22000, '2100 sq ft');">Add to Cart</button>
-          </div>
+        <h1 class="product-title">NikeCourt Air Zoom Vapor 11 Premium</h1>
+        <h2 class="item-category">Women's Shoes</h2>
+        <h3 class="price">$180</h3>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+      <div class="item-card">
+        <div class="product-img12"></div>
 
-        </div>
-      </section>
-      <button onclick="checkout()">Proceed to Checkout</button>
-      <footer>
-        <div class="footer-content">
-            <div class="footer-section footer-logo">RichLook</div>
-            <div class="footer-section">
-                
-                <p>Explore the latest footwear trends at RichLook Shoe Store for the freshest designs and seamless shopping experience.</p>
-            </div>
-            <div class="footer-section">
-                <h4>Customer Service</h4>
-                <ul>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Order Tracking</a></li>
-                    <li><a href="#">FAQs</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Follow Us</h4>
-                <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
-                <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
-                <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <address>RichLook Shoes<br>153 Hawthorn , Forest Hill</address>
-        </div>
-    </footer>
-    
-    <script src="Javascript/script.js"></script>
+        <h1 class="product-title">Nike Air Zoom Generation</h1>
+        <h2 class="item-category">Men's Shoes</h2>
+        <h3 class="price">$190</h3>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+      <div class="item-card">
+        <div class="product-img13"></div>
+
+        <h1 class="product-title">Nike Air Zoom Flight 95</h1>
+        <h2 class="item-category">Men's Shoes</h2>
+        <h3 class="price">$160</h3>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+      <div class="item-card">
+        <div class="product-img14"></div>
+
+        <h1 class="product-title">Nike Air Zoom Infinity Tour NRG</h1>
+        <h2 class="item-category">Men's Golf Shoes</h2>
+        <h3 class="price">$180</h3>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+      <div class="item-card">
+        <div class="product-img15"></div>
+
+        <h1 class="product-title">NikeCourt Air Zoom GP Turbo Osaka</h1>
+        <h2 class="item-category">Women's Hard Court Tennis Shoes</h2>
+        <h3 class="price">$160</h3>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+      <div class="item-card">
+        <div class="product-img16"></div>
+
+        <h1 class="product-title">Nike Air Max Pulse Roam</h1>
+        <h2 class="item-category">Men's Shoes</h2>
+        <h3 class="price">$170</h3>
+        <ul id="cartItems"></ul>
+        <button class="add-cart">Add to Cart</button>
+      </div>
+
+    </div>
+  </section>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section footer-logo">RichLook</div>
+      <div class="footer-section">
+
+        <p>Explore the latest footwear trends at RichLook Shoe Store for the freshest designs and seamless shopping
+          experience.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Customer Service</h4>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Order Tracking</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+        <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <address>RichLook Shoes<br>153 Hawthorn , Forest Hill</address>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
